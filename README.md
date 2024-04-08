@@ -40,3 +40,20 @@
 
 > Amazon VPC
 - It lets you create a virtual network for your AWS services to exist in the local IP address range in your local network.
+
+## Day 3:
+
+> CloudFormation
+- Used for creating or infrastructure. CloudFormation allows a DevOps engineer to automate the creation of his infrastructure.
+
+> Machine Learning
+- AWS services are Amazon Kendra, Amazon Personalize, Amazon Lookout for metrics, Amazon Forcast, Amazon Fraud detector, Amazon Rekognition, Amazon Polly, Amazon Transcribe, and Amazon Lex.
+- Amazon DeepRacer: [Link](https://aws.amazon.com/deepracer/league/)
+
+> Case Studies
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+Few more architecture: [Link](https://aws.amazon.com/blogs/architecture/)
