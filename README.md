@@ -47,7 +47,7 @@
 - Used for creating or infrastructure. CloudFormation allows a DevOps engineer to automate the creation of his infrastructure.
 
 > Machine Learning
-- AWS services are Amazon Kendra, Amazon Personalize, Amazon Lookout for metrics, Amazon Forcast, Amazon Fraud detector, Amazon Rekognition, Amazon Polly, Amazon Transcribe, and Amazon Lex.
+- AWS services are Amazon Kendra, Amazon Personalize, Amazon Lookout for metrics, Amazon Forcast, Amazon Fraud Detector, Amazon Rekognition, Amazon Polly, Amazon Transcribe, and Amazon Lex.
 - Amazon DeepRacer: [Link](https://aws.amazon.com/deepracer/league/)
 
 > Case Studies
@@ -57,3 +57,21 @@
 ![alt text](image-3.png)
 ![alt text](image-4.png)
 Few more architecture: [Link](https://aws.amazon.com/blogs/architecture/)
+
+## Day 4:
+
+> Cloud Computing
+- CapEx vs OpEx: CapEx(Capital Expenditures) are upfront purchases towards fixed assets, and OpEx(Operating expenditures) are funds used to run day-by-day operations.
+- Cloud Computing models: Infrastructure as a Service (building blocks), Software as a Service, and Platform as a Service.
+- Cloud Deployment models: Private cloud, public cloud, and Hybrid cloud (clouds connected via VPN or direct connect).
+- AWS Availability Zones: One or more discrete data centers with redundant power, networking, and connectivity in an AWS region.
+- **A region is global and is made up of two or more AZs. An AZ is made up of multiple data centers. Multi-AZ deployments provide high availability and fault tolerance.**
+
+> Cloud Adoption Framework
+- It has 4 domains: Technology, Process, Organization, and Product.
+- It has 4 phases: Envision, Align, Launch, and Scale.
+- Well-Architecured Framework Pillars: Security, Cost Optimization, Performance efficiency, Operational Excellence, Reliability, and Sustainability.
+- ![alt text](image-5.png)
+
+> AWS Account
+- Let's create an AWS account
