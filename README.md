@@ -13,7 +13,7 @@
 1. For this lab there is an AWS account, inside of IAM there are different groups such as Admin, Developers, and Test. Each group has a certain set of permissions.
 2. Three users have already been created and we can check them in the **Users Tab**, three groups were created previously named EC2-Admin, EC2-Support, and S3-Support which can be seen under **User groups Tab**.
 3. The EC2-Admin has an inline policy (has permissions to describe, start, and stop EC2 instances | also a few metrics). The EC2-Support group has managed policy (has permissions to describe EC2 instances and list cloud metrics). The S3-Support has managed policy (has permissions of read-only access such as get, list, and describe objects.)
-4. So now we have 3 users (U1, U2, U3) and we are going to assign these users to the above groups. First, assign the U1 to the S3-Support group (**Process: Click on the S3-Support group, click on the Add Users button, select the U1, and then click on Add Users**). Then we are going to do the same for the U2 and U3. Add the U2 to the EC2-Support group and the U3 to the EC2-Admin group.
+4. So now we have 3 users (U1, U2, U3) and we are going to assign these users to the above groups. First, assign the U1 to the S3-Support group (**Process: Click on the S3-Support group, click the Add Users button, select the U1, and then click on Add Users**). Then we are going to do the same for the U2 and U3. Add the U2 to the EC2-Support group and the U3 to the EC2-Admin group.
 5. We can edit the permissions of any user (**Process: Click on the user, under the permissions tab expand the policy, and click on the edit**).
 6. To demonstrate these permissions, **go to the dashboard copy the sign-in URL paste it into a new tab, and log in as U1. To check permissions click on S3 and click on create bucket, it fails since U1 does not have permissions and this goes the same with EC2 since U1 has read-only permissions**.
 7. Similarly we log in as U2, here when we click on EC2 and click on instances it works and has more permissions than U1, but when we try to stop that instance it fails. U2 also cannot create or view the buckets.
@@ -65,7 +65,7 @@ Few more architecture: [Link](https://aws.amazon.com/blogs/architecture/)
 - Cloud Computing models: Infrastructure as a Service (building blocks), Software as a Service, and Platform as a Service.
 - Cloud Deployment models: Private cloud, public cloud, and Hybrid cloud (clouds connected via VPN or direct connect).
 - AWS Availability Zones: One or more discrete data centers with redundant power, networking, and connectivity in an AWS region.
-- **A region is global and is made up of two or more AZs. An AZ is made up of multiple data centers. Multi-AZ deployments provide high availability and fault tolerance.**
+- **A region is global and comprises two or more AZs. An AZ is made up of multiple data centers. Multi-AZ deployments provide high availability and fault tolerance.**
 
 > Cloud Adoption Framework
 - It has 4 domains: Technology, Process, Organization, and Product.
@@ -75,3 +75,30 @@ Few more architecture: [Link](https://aws.amazon.com/blogs/architecture/)
 
 > AWS Account
 - Let's create an AWS account
+
+## Day 5:
+
+> Elastic Cloud Compute (EC2)
+- EC2 pricing options: On-Demand, Spot, Reserved instances, Dedicated Hosts, and Savings Plans.
+- It offers load balancing. Types of load balancers are Classic, Application (used at layer 7 for flexible application management using HTTP and HTTPS protocols), Gateway, and Network (used at layer 4 using TCP, UDP, and TLS for extreme performance and static IPs).
+- Auto Scaling has two types horizontal (increases the number of instances) and vertical (increases the power of the instance)
+- Connection: various ways to connect to a Linux EC2 instance: Instance connect, SSH, and System Manager. Whereas RDP is for Windows.
+
+> Containers
+- Just think of every container as a separate application. Benefits are Portability, Optional Consistency, Efficiency, Application development, and Less overhead.
+- We can use containers when (microservices architecture), (we want the application to be isolated, deployed, and scaled), (support for CI/CD deployments much smoother), and (if we have several repetitive jobs).
+- Services provided are
+1. Elastic Container registry: it stores all the records of the container.
+2. Elastic Container Service: it is fully managed and serverless and supports Docker and Docker Compose CLI.
+3. Elastic Kubernetes Service: it is a fully managed open-source system and this supports Kubernetes.
+- Fargate is considered serverless and is used to manage containers.
+
+> Lambda Practice Lab
+- **Go to the lambda console. Click on the Create function and fill in the details. Write a sample code to print out the name, then deploy the function, configure a test event, and click on test.**
+- **We can see the results and then click on the monitor tab and click on view cloud watch logs. Here click on the latest task and there we can see the output of our program.**
+
+> Other Compute services
+- Outposts: Fully managed on-premises solutions, supports hybrid deployment models.
+- Lightsail: not on-premises, allows quick launch of all resources needed for small projects, has simple UI, has bundles, and is low cost.
+- Batch: allows processing large workload into smaller chunks or batches.
+- Wavelength: allows users to reach application servers without leaving the 5G mobile network.
