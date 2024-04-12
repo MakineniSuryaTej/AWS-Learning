@@ -141,3 +141,23 @@ The main uses are cost-effective, secure, and seamless integration.
 - Volume Gateway: Provides block storage and offers stored and cache volumes.
 - Tape Gateway: For long-term data (the archived data).
 - FSx File Gateway: Extends on-premises file system.
+
+## Day 7
+
+- Edge location is a data center that is nearest to the user requesting your content.
+
+> AWS Global Accelerator
+- It is networking service that sends your user traffic to the AWS's global network infrastructure enhancing your application performance and availability.
+- Benifits are improved performance, simplified traffic management, security/Reliability, and consistent global user experience.
+
+> Networking
+- The Virtual Private Cloud (VPC) has two types of subnets: Public and Private. Also VPC have internet gateway and Route table. Each subnet must be associated with route table. Security in VPC: Security group(operates at instance level) and Network Access Control List (operates at subnet level, and these are stateless).
+
+> DNS (Amazon Route 53 for AWS)
+- Its features are sofisticated traffic routing (types: geolocation, latency based, weighted round-robin routing).
+- Health checks, DNS failover, and scalability & integration.
+
+> AWS Direct Connect
+- It is like private road build exclusively for your use. Few benifits are high speed data transfer, reduced bandwith costs, and reliable connection.
+- AWS VPN: Site-to-Site VPN (creates a secure connection between your data center or branch office and you AWS environment) and Client VPN (allows securly access AWs resources or your private network from any location).
+- Use direct connect (larger scale data transfer, consistent performance, and sensitive data) and use VPN (encrypted over public network, cost-effective, and quick & easy setup).
