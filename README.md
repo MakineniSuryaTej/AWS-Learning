@@ -102,3 +102,42 @@ Few more architecture: [Link](https://aws.amazon.com/blogs/architecture/)
 - Lightsail: not on-premises, allows quick launch of all resources needed for small projects, has simple UI, has bundles, and is low cost.
 - Batch: allows processing large workload into smaller chunks or batches.
 - Wavelength: allows users to reach application servers without leaving the 5G mobile network.
+
+## Day 6:
+
+> EC2 Storage options
+- EBS is block-level storage used with EC2 instances, EFS is a file system scalable across multiple EC2 instances, and the instance store provides temporary block-level storage directly attached to the instance. 
+- Only EBS and EFS offer durable storage solutions. In the instance store the data will be lost if the instance is interrupted. All provide high performance, EBS is particularly known for its provisioned IOPS, EFS is scalable file storage, and instance store for a high I/O operation suitable for temporary data. While EBS and EFS have costs associated with the amount of storage provisioned, the instance store comes at no additional cost, as it's included in the instance price.
+
+> Amazon Simple Storage Service (S3)
+- S3 is object storage and is globally acceptable. The bucket is our primary container; within it, we have objects or data files stored in S3 have data, a key (unique within a bucket), and metadata.** Benefits are durability, Scalability, Security, and Versatility. Use cases are Data backup, Web hosting, and Content distribution.
+
+> S3 Storage classes
+- Standard: Suitable for frequently accessed data and has high throughput and low latency.
+- Intelligent-Tiering: Suitable for data of unpredictable access patterns and designed for savings.
+- Standard-Infreqent access: Suitable for less frequently accessed data and requires rapid access when needed.
+- One Zone-Infrequent access: Suitable for secondary backup or easily reproducible data. (stores only in one AZ)
+- Glacier Instant Retrieval: Designed for immediate access to our archive data.
+- Glacier Flexible Retrieval: Designed for data that is accessed only 1-2 times a year and is not immediate.
+- Glacier Deep archive: Long time archive and is slow.
+
+> S3 Practice lab
+- **First search for S3 and click on the create bucket. The name of the bucket has to be globally unique and click on the enable option in the bucket versioning which allows us to download the previous version of our bucket, we can also enable encryption and finally click on create a bucket.**
+- **Now click on the name, click on upload files, and select or sample file. To understand how versioning works edit or sample a file with dummy data and upload the same file to the bucket again.**
+- **If we check the data in the uploaded file it has been changed. To resolve this click on our file go to the versions tab select the previous version of or file download it and again upload the downloaded file into the bucket.**
+
+> FSx & Elastic Disaster Recovery
+- FSx is tailored for Windows-based workloads. EDR is for swift recovery and minimizing disruptions. FSx offers seamless integration and EDR is important for quick recovery times and cost-effectiveness.
+
+> Elastic Block Store (EBS)
+- EBS's key features are persistent storage, highly available and durable, scalable, encrypted, and snapshot.
+- EBS Volme types
+- 1. Solid State Drive (SSD): faster, more expensive, and ideal for high IOPS.
+- 2. Hard Disk Drive (HDD): slower, less expensive, and ideal for throughput tasks.
+
+> AWS Storage Gateway (a hybrid storage service)
+The main uses are cost-effective, secure, and seamless integration.
+- S3 File Gateway: keeps your data in cloud-native formats.
+- Volume Gateway: Provides block storage and offers stored and cache volumes.
+- Tape Gateway: For long-term data (the archived data).
+- FSx File Gateway: Extends on-premises file system.
