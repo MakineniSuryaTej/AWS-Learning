@@ -147,17 +147,80 @@ The main uses are cost-effective, secure, and seamless integration.
 - Edge location is a data center that is nearest to the user requesting your content.
 
 > AWS Global Accelerator
-- It is networking service that sends your user traffic to the AWS's global network infrastructure enhancing your application performance and availability.
-- Benifits are improved performance, simplified traffic management, security/Reliability, and consistent global user experience.
+- It is a networking service that sends your user traffic to the AWS's global network infrastructure enhancing your application performance and availability.
+- Benefits are improved performance, simplified traffic management, security/Reliability, and consistent global user experience.
 
 > Networking
-- The Virtual Private Cloud (VPC) has two types of subnets: Public and Private. Also VPC have internet gateway and Route table. Each subnet must be associated with route table. Security in VPC: Security group(operates at instance level) and Network Access Control List (operates at subnet level, and these are stateless).
+- The Virtual Private Cloud (VPC) has two types of subnets: Public and Private. Also, VPC has an internet gateway and a Route table. Each subnet must be associated with a route table. Security in VPC: Security group(operates at instance level) and Network Access Control List (operates at subnet level, and these are stateless).
 
 > DNS (Amazon Route 53 for AWS)
-- Its features are sofisticated traffic routing (types: geolocation, latency based, weighted round-robin routing).
+- Its features are sophisticated traffic routing (types: geolocation, latency-based, weighted round-robin routing).
 - Health checks, DNS failover, and scalability & integration.
 
 > AWS Direct Connect
-- It is like private road build exclusively for your use. Few benifits are high speed data transfer, reduced bandwith costs, and reliable connection.
-- AWS VPN: Site-to-Site VPN (creates a secure connection between your data center or branch office and you AWS environment) and Client VPN (allows securly access AWs resources or your private network from any location).
+- It is like a private road built exclusively for your use. A few benefits are high-speed data transfer, reduced bandwidth costs, and reliable connection.
+- AWS VPN: Site-to-Site VPN (creates a secure connection between your data center or branch office and your AWS environment) and Client VPN (allows secure access to AWS resources or your private network from any location).
 - Use direct connect (larger scale data transfer, consistent performance, and sensitive data) and use VPN (encrypted over public network, cost-effective, and quick & easy setup).
+
+## Day 8
+
+> Databases
+- relational Database: organized in rows and columns, Amazon Relational Database Service.
+- NoSQL Databases: organized as key-value pairs, Amazon DynamoDB.
+- In-Memory Databases: stores them in the computer's main memory, Amazon ElastiCache & Amazon MemoryDB for Redis
+- Graph Database: Amazon Neptune, used for fraud detection, recommendation systems, and drug discovery.
+
+> AWS Database Migration Service
+- It is simple to use, minimal downtime, reliable, and database consolidation.
+- AWS Schema Conversion tool: It helps convert our source database's database schema to a format compatible with AWS target databases.
+
+> Amazon DynamoDB
+- Features: Performance at scale, fully managed, built-in security, and Backup & restore. (low latency and high performance)
+- Use cases: Web and Mobile Applications, Gaming Applications, IoT applications, and E-Commerce Platforms.
+
+> Memory-Based Databases
+- They store data in RAM instead of traditional storage.
+- Amazon MemoryDB for Redis: Ultra-fast performance, Data Durability. Uses Cases: Cacheing for web applications, Real-Time Analytics, Session Store for Applications, Leaderboard and Gaming, And Geospatial Data processing.
+
+> Continuous Integration / Continuous Deployment (CI/CD)
+- It aims to streamline and accelerate the software development lifecycle. Benefits: Automation (Fast, repeatable, and scalable), Manua Effort Avoided (Slow, error-prone, and inconsistent), and Small changes applied frequently (catch bugs while they are small and simple to fix).
+
+> AWS Development tools
+- AWS CodeCommit: It is like a private git repository in the cloud.
+- AWS CodeBuild: It is a fully managed code service that runs a set of commands we decide. **It can refer to the code stored in the CodeCommit and use them to build deployable artifacts like packages, docker images, etc.**
+- AWS CodeDeploy: It is an automated deployment service that allows us to automatically deploy software into EC2 instances, on-premises systems, and lambda.
+- AWS CodePipeline: Manages and automates the process (CodeCommit -> CodeBuild -> CodeDeploy -> EC2).
+
+- Creating a S3 bucket and uploading a file using AWS CLI
+1. Open the AWS CLI, type **aws s3 mb s3://mybucket-8745468989238** and hit enter.
+2. To list the buckets type **aws s3 ls**.
+3. Now create a sample file by typing **echo "my new file" >> file.txt**.
+4. Now to upload type **aws s3 cp file.txt s3://mybucket-8745468989238**.
+5. Type **aws s3 ls s3://mybucket-8745468989238** which shows files in our bucket.
+
+> AWS CodeArtifact
+- It is an artifact repository that lets developers securely store, publish, and share software packages (Maven, NPM, and Python). It makes it easy for developers to find the software versions they need. 
+- Artifacts like documentation, compiled applications, deployable packages, and libraries.
+
+> Tight Coupling
+- Coupling describes the dependencies between the components. This tight coupling is a feature in **monolithic application** where all the components in the application are interdependent. One failed component can bring the entire system down.
+
+> Loose Coupling
+- It is a feature in **microservices-based architecture** where all the components operate independently. It doesn't need to wait for other components to be completed.
+
+> Application Integration Services
+
+| Integration Approach    | AWS Service                       |
+| :---                    |                              ---: |
+| Queues                  | SQS - Simple Queue Service        |
+| Notification            | SNS - Simple Notification Service |
+| Events                  | EventBridge                       |
+
+> SNS - Simple Notification Service and practice lab
+- It allows us to set up, operate, and send notifications. It uses a pub and sub-model which means publish and subscribe. 
+- Lab:
+1. First we are going to create an SNS topic, so go to the console, search for SNS, and type the topic name in our case we are going to monitor the EC2 so let's name it EC2State and click on create topic.
+2. Now we have to subscribe to the topic, so click on Create Subscription, select the topic that we have created, select a protocol which in our case Email, type the email, and click on Create Subscription. You will get a confirmation email, click it and the subscription has been created.
+3. Now to test our topic, let's go to the EC2 instance select it, and copy the instance ID, then go to the cloud watch, click on the Create Alarm, click on Select metric, paste our instance ID, click on EC2 pre-instance metrics, again type for StatusCheck, then click on the StatusCheckkFailed_Instance option and hit select metric.
+4. We will select the period for 1 minute, change it into Greater/Equal to 1, select "Treat missing data as bad", then hit next. Here we will select our SNS topic which is EC2State, add the notification for all three alarm state triggers, and then hit next.
+5. Create a name for the alarm and click Create alarm. Then after some time, we get an email saying "Amazon CloudWatch Alarm "EC2State" in the US East (N. Virginia) region has entered the ALARM state, because "Threshold Crossed:....".
