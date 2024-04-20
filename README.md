@@ -224,3 +224,38 @@ The main uses are cost-effective, secure, and seamless integration.
 3. Now to test our topic, let's go to the EC2 instance select it, and copy the instance ID, then go to the cloud watch, click on the Create Alarm, click on Select metric, paste our instance ID, click on EC2 pre-instance metrics, again type for StatusCheck, then click on the StatusCheckkFailed_Instance option and hit select metric.
 4. We will select the period for 1 minute, change it into Greater/Equal to 1, select "Treat missing data as bad", then hit next. Here we will select our SNS topic which is EC2State, add the notification for all three alarm state triggers, and then hit next.
 5. Create a name for the alarm and click Create alarm. Then after some time, we get an email saying "Amazon CloudWatch Alarm "EC2State" in the US East (N. Virginia) region has entered the ALARM state, because "Threshold Crossed:....".
+
+## Day 9
+
+> Simple Queue service 
+- SQS allows us to decouple the components of an application so that they are independent.
+- Key features: Pull-based, multiple components can add and consume messages, messages are processed asynchronously, and guaranteed to be processed at least once.
+- SQS improves performance and can scale and support millions of concurrent requests.
+- Standard Queues: It uses best-effort ordering. Occasionally more than one copy of a message might be delivered.
+- SQS FIFO Queues: Order is strictly preserved and there will be no duplicates.
+- Short Polling returns a response immediately even if the message queue being polled is empty. (most of the responses are empty and will be charged).
+- Long Polling periodically polls the queue. cost-effective.
+- Simple Email Service (SES): You can send richly formatted HTML emails from the applications.
+
+> EventBridge
+- It is all about event-driven architecture. **An event is a state change**.
+- It can handle scheduled events, and the rules that run on a schedule. We can set a rule to run once an hour or a day.
+
+> Step Function
+- It manages the logic of our application. It provides a visual interface, it allows us to build, and run serverless applications in a series of steps. Each step in our application executes in order, as defined by the business logic. The output of one step may act as input to the next.
+- It provides **Error Handeling**. 
+
+> AWS CloudFormation
+- ** It allows us to manage, configure, and provision our AWS infrastructure as code.** Resources are defined using a template written in YAML or JSON. This allows you to quickly provision AWS resources consistently, with fewer errors.
+
+> AWS Elastic Beanstalk
+- Deploys and scales your web applications including the web application server platform. Provisions the AWS resources for you like EC2, RDS, S3, Elastic Load Balancer, etc.
+- Provides Java, .NET, PHP, Node.js, Python, Ruby, Go, Apache Tomcat, IIS, Nginx, Docker, etc. OS and application server updates. Monitoring, metrics, and health checks are all included.
+- Deploying an application using Elastic Beanstalk
+1. Create a service role for Elastic Beanstalk.
+2. Create an EC2 instance role for Elastic Beanstalk.
+3. Upload the provided code.
+
+> X-ray
+- It is a tool that helps developers analyze and debug distributed applications—allowing you to troubleshoot the root cause of performance issues and errors.
+- The X-ray service map provides an end-to-end view of requests as they travel through your application.
