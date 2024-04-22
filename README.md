@@ -258,4 +258,82 @@ The main uses are cost-effective, secure, and seamless integration.
 
 > X-ray
 - It is a tool that helps developers analyze and debug distributed applications—allowing you to troubleshoot the root cause of performance issues and errors.
-- The X-ray service map provides an end-to-end view of requests as they travel through your application.
+- The X-ray service map provides an end-to-end view of requests traveling through your application.
+
+## Day 10
+
+> AWS Snow Family
+- Migrating terabytes or petabytes of data to AWS. It is a Data Transfer Solution.
+- Snowball: Great option if you've got at least 10TB of data to migrate.
+- Snowball: Great option if you've got at least 10TB of data to migrate and you need local computing.
+- Snowmobile: Great option if you've got more than 10PB of data to migrate.
+- SnowCone: Small and portable, military-grade 8TB HDD or 14TB SSD storage and weighs under 5 lbs. 
+
+> AWS Transfer Family
+- Business-to-business file transfer using protocols like SFTP, AS2, FTPS, and FTP. Files are transferred into and out of AWS storage like S3 or EFS. 
+- File sharing and transfer with external parties.
+
+> AWS DataSync
+- It is designed to move large amounts of data (like 500TB). It enables high data throughput, automated, and pay-per-GB transfer.
+- Benefits: Securely migrate all your data to AWS, cost-effectively replicate the data, archive historical data to low-cost AWS storage, and support hybrid or multi-cloud workflow.
+
+> AWS Application Discovery Service
+- It gathers data about your existing on-premises application servers and databases. We install an agent on each server to collect the data. 
+- A virtual appliance can be deployed on VMware vCenter systems to avoid using an agent.
+- The data includes serverless inventory, configuration, operating system, capacity usage, and networking.
+- This data can be used to develop a migration plan to move applications and data to AWS.
+
+> AWS Application Migration Service
+- It is an automated Lift-and-Shift service, that automatically migrates applications to AWS without modifying them.
+- The AWS Replication agent is installed on the source server and replicates to a new server in AWS.
+- Migrate applications that are running on physical servers, virtual servers, other cloud providers, and other AWS accounts or regions.
+
+> AWS Migration Hub
+- It is a central location to gather application and server inventory information.
+-It is integrated with AWS Application Discovery Service, AWS Application Migration Service, and AWS DMS. 
+-It allows us to group servers so that you can plan and track the progress of your migration.
+
+> Redshift and Redshift serverless
+- It is a data warehousing service. features: massively parallel processing, automated data management, and designed for Online Analytical Processing (OLAP).
+- It allows us to store huge amounts of data. Redshift serverless has no infrastructure to manage.
+- Use cases: complex querying and reporting, data lake integration, and operational analytics.
+
+> Kinesis
+- A family of services that enables you to collect, process, and analyze streaming data in real-time.
+- Data generated continuously by thousands of data sources (stocks, game data, social media feeds, IoT sensors, log files, etc.).
+
+> Kinesis Data Firehose
+- Firehose: Capture, transform, and load data streams into AWS data stores to enable near real-time analytics with BI tools.
+
+> Amazon Athena
+- Athena enables you to run standard SQL queries on data stored in S3. It is serverless, an interactive query service, without complex ETL processes, and works directly with data stored in S3.
+- Use cases include querying log files or generating reports from S3 data.
+- Using Athena to query data
+1. Configure CloudTrail to create some log data.
+2. Create an S3 bucket for Athena results.
+3. Query the data using Athena.
+
+> AWS Glue
+- It is a serverless data preparation and integration service. Discovers and catalogs our data. Performs ETL(Extract, Transform, and Load).
+- It prepares your data for analytics and ML. 
+
+> AWS Data Exchange
+- It lets you securely exchange and use data that is provided by a third party on a subscription basis. The data products can be financial services, healthcare, weather, manufacturing, and telecommunications. It lets us create our own/personal data product.
+
+> Amazon Elastic Map Reduce (EMR)
+- It is a big data platform with large-scale parallel data processing and petabyte-scale interactive analysis.
+- Supports multiple types of data: Structured, Semi-structured, and unstructured data.
+- It is a fully managed big data solution. Supports open-source technologies like Apache Spark, Apache Hive, Presto, and Hadoop. Its use cases include finding patterns in genomic data, identifying preferences from clickstream, or analyzing log data.
+
+> Amazon OpenSearch
+- It is fully managed Elastisearrch, based on open-source technology. Compatible with industry-standard Elastisearch open-source APIs, Logstash, and Kibana.
+- Ingest data from AWS services like CloudWatch Logs, S3, and DynamoDB.
+
+> Amazon Managed Streaming for Apache Kafka (MSK)
+- It is a widely used open-source technology to build a real-time data streaming pipeline.
+- It can process streams of events from hundreds of event sources. An example use case is to track and analyze stock market data in real time.
+
+> Amazon Quicksight
+- It is a SaaS model business analytics service that lets you make better decisions based on your data.
+- It creates dashboards to gain business insights. It lets us visualize our data (bar graphs, scatter plots, pie charts, etc).
+- Use cases: Analyzing sales performance, Application traffic data, and marketing campaign analysis.
