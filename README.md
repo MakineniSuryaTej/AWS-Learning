@@ -337,3 +337,75 @@ The main uses are cost-effective, secure, and seamless integration.
 - It is a SaaS model business analytics service that lets you make better decisions based on your data.
 - It creates dashboards to gain business insights. It lets us visualize our data (bar graphs, scatter plots, pie charts, etc).
 - Use cases: Analyzing sales performance, Application traffic data, and marketing campaign analysis.
+
+## Day 11
+
+> Amazon SageMaker
+- It is a fully managed ML platform. It lets you import (from S3, Athena, etc.) and prepare the data, build your model, train the model using optimized infrastructure, and deploy the model (like EC2, etc.).
+
+> Amazon Kendra
+- It is an intelligent Search service. It uses natural language processing and allows a customized search.
+- Data sources include S3, FSx, RDS, Aurora, Websites, Google drives, Github, etc.
+- The questions we can ask can be fact-based or descriptive.
+
+> Amazon Lex
+- Lex allows you to build conversational interfaces using natural language models in your application.
+- Features: Multi-Platform compatibility, handles speech or text input, etc.
+The main use is to provide a helpful customer handling chatbox on our website.
+
+> Amazon Polly
+- It uses deep learning to generate realistic-sounding speech, from the text we provide.
+- We provide the text and Polly will generate speech that can be streamed, downloaded, or saved to S3.
+
+> Amazon Comprehend
+- It used NLP, and ML to process text to discover insights, meanings, etc.
+- It can perform sentiment analysis from social media feeds and also provides intelligent search.
+
+> Amazon Textract, Transcribe, Translate
+- A group of services that use ML to process text.
+- Textract extracts information from documents, Transcribe is a speech-to-text service, and Translate is a language translation service.
+
+> Amazon Rekognition
+- It performs image and video analysis. It can perform content moderation to identify harmful or offensive images, identify verification, and identify objects and text in images.
+
+> Monitoring and Logging
+- Collecting and monitoring these is critical to the health of the AWS ecosystem.
+- Metrics: Numerical representations of the things like capacity and demand, tracked over time.
+- Logs: A record of what has happened, to make sense of errors or security events.
+- Configurations: Settings and guidelines across all of your cloud resources.
+
+> CloudWatch vs CloudTrail
+- CloudWatch
+1. Gives visibility to cloud resources and applications.
+2. Tracks metrics in dashboards.
+3. Stores logs from many sources.
+4. Triggers events with CloudWatch alarms.
+5. CloudWatch lets you watch your cloud resources as your AWS ecosystem evolves.
+
+- CloudTrail
+1. Provides accountability for actions taken in your account.
+2. Centralize activity logs across regions in an S3 bucket.
+3. Tracks only API activity in your AWS account.
+4. CloudTrail creates a trail of breadcrumbs for any action in your account.
+
+
+> Tags (Managing Resources)
+- They are key-value pairs, they help you sort and visualize your cloud resources on AWS.
+
+> Systems Manager
+- Groups resources on AWS, on-premises, or on other cloud platforms. View aggregated operational data of resource group.
+- **Systems Manager Parameter Store: It can store sensitive data like passwords, database strings, license keys, etc.**
+
+> AWS Health Dashboard
+- The best way to know about service outages in your AWS account is by using the AWS health dashboard or Health API.
+- **Trusted Advisor** is a one-stop shop for best practice advice. It provides advice on Performance, Cost Optimization, Service Limits, Fault Tolerance, Operational Excellence, and Security.
+
+> Auditing on AWS
+- Auditing is the continuous act of monitoring passive configurations for security and best practices.
+- **AWS Config**: Leverages pre-defines recommendations or create custom rules.
+- Audit Manager: Centralize audit data from AWS config and security services. Find root causes of noncompliance and generate reports.
+- **The AWS Well-Architected Tool**: Assess your workloads, learn about best practices, and generate action plans.
+
+> Additional Services
+- Amazon Connect: It is a business service that allows you to provision a contact center in the cloud.
+- WorkSpaces and AppStream are end-user services that enable you to give access to virtual desktops and applications hosted on AWS.
