@@ -409,3 +409,48 @@ The main use is to provide a helpful customer handling chatbox on our website.
 > Additional Services
 - Amazon Connect: It is a business service that allows you to provision a contact center in the cloud.
 - WorkSpaces and AppStream are end-user services that enable you to give access to virtual desktops and applications hosted on AWS.
+
+## Day 12
+
+> Security (Revision & Bigger Picture)
+- **The shared responsibility Model**
+![Picture](image-6.png)
+- **The customer is responsible for security IN the cloud.**
+- **The AWS is responsible for the security OF the cloud.**
+- The permissions written are called policies.
+- IAM Access Analyzer: Identify resources with eternal access, validate IAM policies, and generate IAM Policies based on usage.
+-IAM Policy Simulator: Test new IAM policies before granting them to users, user groups, and roles.
+- An IAM role can be assumed by any resource on AWS and grant access to other resources. 
+
+> IAM Identity Center (Federated Identity)
+- It allows AWS users to leverage Single Sign-On to assume a role each time they log in temporarily
+
+> Amazon Cognito (Web Federated Identity)
+- Create user pools and grant temporary keys to customers to give access to your application.
+
+> AWS Directory Service
+- This service enables you to connect your AWS ecosystem with an existing Microsoft Authenticated Directory.
+
+> AWS Security Token Service (STS)
+- With this, you can grant the individual temporary access, allowing them to access a temporary role, and then they can access the AWS resources (It's like read-only access for third-party audit).
+
+> Network Security Services
+- AWS Network Firewall: This not only filters based on origin but can also define complete rules to inspect traffic within our VPCs.
+- AWS Web Application Firewall: It protects your web applications from common exploits.
+- AWS Shield: It protects from DDoS Attacks. Shield Standard protects your AWS resources from DDoS attacks at no extra cost. Shield Advanced provides expanded protection and access to a 24/7 DDoS response team.
+- AWS Firewall Manager: It helps you administer our network security from a single service.
+
+> Security Confusion
+- AWS Trusted Advisor: It gives you advice or best practice suggestions on all kinds of different things.
+- Amazon GuardDuty: It collects logs from around AWS and uses ML to detect threats intelligently.
+- Amazon Detective: It helps you investigate security events that have already happened
+- Amazon Inspector: It continuously scans your workloads for software vulnerabilities and network exposure.
+
+> AWS Organizations
+- It allows you to administer multiple AWS accounts from a single point, consolidating cost while organizing and limiting access to resources.
+- You can use Config rules to detect non-compliant resources across your organization.
+- AWS Control Tower: allows you to automate account creation and the application of best-practice Config rules and Service Control Policies(SCPs).
+
+> Compliance Programs
+- AWS Artifact: It is a repository of compliance documents, provides them to regulators, and informs your cloud architecture.
+- Secrets Manager rotates the password.
