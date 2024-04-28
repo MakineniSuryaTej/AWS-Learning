@@ -454,3 +454,51 @@ The main use is to provide a helpful customer handling chatbox on our website.
 > Compliance Programs
 - AWS Artifact: It is a repository of compliance documents, provides them to regulators, and informs your cloud architecture.
 - Secrets Manager rotates the password.
+
+## Day 13
+
+> Cloud costs
+- Total Cost of Ownership (TCO)
+- Advantages as per cost are
+1. Trade fixed expense for variable expense.
+2. Benefit from massive economies of scale.
+3. Stop guessing
+4. Increases speed and agility.
+5. Stop spending money maintaining data centers.
+6. Go global in minutes.
+
+> Compute Optimizer
+- It uses ML to analyze your CloudWatch utilization metrics and provides right-sizing recommendations for your EC2 instances.
+- Fully Embracing On-Demand: AWS Lambda, AWS.
+- Reserved instances can save costs on known workloads. Spot instances should only be used if your workloads can safely start and stop with potential interruptions.
+
+> Data storage costs
+- S3 Lifecycle Configuration: Creates per-object policies that define transition actions and expiration actions.
+- S3 Storage lens: It examines your S3 buckets organization-wide to inspect access patterns and provide storage optimization recommendations.
+
+> Data Transfer costs
+- Inbound data transfer from the Internet to AWS is always free, however Outbound data transfer to the Internet varies in cost by service. 
+- Inter-Region data transfer is billed per GB depending on the origin and destination.
+
+> Monitoring and Predicting Costs
+- AWS Pricing Calculator: allows you to access your potential and cloud costs.
+- AWS Budgets: allows you to set customized budgets and receive SNS alerts when you exceed your thresholds.
+- AWS Cost Explorer: It is a dashboard where you can gain insights on your AWS usage and projected spending. Filter cost by attributes such as service or region.
+- AWS Cost and Usage Reports: they give you the most detailed data on your cost and usage history.
+
+> Billing Conductor
+- It allows you to create billing groups within your AWS organizations. Distribute bulk discounts across billing groups and set custom pricing rates.
+
+> Support in AWS
+- Basic Plan: Free, Developer: $29/month, Business: $100/month, Enterprise On-Ramp: $5,500/month, and Enterprise: $15,000/month.
+- Basic Support: Includes trusted advisor free checks, AWS health dashboard, and access to customer service and documentation.
+- Developer Support: Includes Basic Support + receives general guidance within 12-24 hours depending on severity.
+- Business Support: Includes full set of trusted advisor checks + basic support + 1-24 hours guidance + 24/7 access to phone, web, or chat support team.
+- Enterprise On-Ramp Support: Includes 30 min - 24 hours guidance + Business support + limited consultative review and guidance, proactive guidance from a pool of Technical Account Managers, and Concierge access to billing issues.
+- Enterprise Support: Includes everything.
+
+> Other Support Services
+- AWS IQ: Find AWS-certified freelancers and consultants.
+- AWS Managed Services: Pre-configured security and operations management.
+- AWS Professional Services: A team of AWS experts.
+- AWS Activate: Support and exclusive offers for startups.
